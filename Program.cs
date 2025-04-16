@@ -517,7 +517,7 @@
             Console.ReadLine();
         }
 
-        static void CancelFlightBooking(string passengerName1)
+        public static void CancelFlightBooking(string passengerName1)
         {
             bool found = false;
 
