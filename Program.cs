@@ -3,38 +3,38 @@
     internal class Program
     {
         // Global variables and data storage
-        private static int MAX_FLIGHTS = 2; // Maximum number of flights the system can handle
-        private static int MAX_BOOKINGS = 2; // Maximum number of bookings the system can handle
+        public static int MAX_FLIGHTS = 2; // Maximum number of flights the system can handle
+        public static int MAX_BOOKINGS = 2; // Maximum number of bookings the system can handle
 
         // Lists to store flight-related information
-        private static List<string> flightCodesList = new List<string>();
-        private static List<string> fromCityList = new List<string>();
-        private static List<string> toCityList = new List<string>();
-        private static List<DateTime> departureTimesList = new List<DateTime>();
-        private static List<int> durationsList = new List<int>();
-        private static List<double> pricesList = new List<double>();
+        public static List<string> flightCodesList = new List<string>();
+        public static List<string> fromCityList = new List<string>();
+        public static List<string> toCityList = new List<string>();
+        public static List<DateTime> departureTimesList = new List<DateTime>();
+        public static List<int> durationsList = new List<int>();
+        public static List<double> pricesList = new List<double>();
 
         // Lists to store booking-related information  
-        private static List<string> passengerNamesList = new List<string>();
-        private static List<string> bookingIDsList = new List<string>();
-        private static List<double> totalPricesList = new List<double>();
+        public static List<string> passengerNamesList = new List<string>();
+        public static List<string> bookingIDsList = new List<string>();
+        public static List<double> totalPricesList = new List<double>();
 
         // Discount codes and their corresponding discount values
-        private static List<string> discountCodesList = new List<string>() { "SAVE10", "SAVE20", "SAVE15" };
-        private static List<double> discountValuesList = new List<double>() { 0.10, 0.20, 0.15 };
+        public static List<string> discountCodesList = new List<string>() { "SAVE10", "SAVE20", "SAVE15" };
+        public static List<double> discountValuesList = new List<double>() { 0.10, 0.20, 0.15 };
 
         // Counters
-        private static int flightCount = 0;
-        private static int bookingCount = 0;
+        public static int flightCount = 0;
+        public static int bookingCount = 0;
 
         // Entry point of the application
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             StartSystem();
         }
 
         /* ====================== Startup & Navigation Functions ====================== */
-        static void DisplayWelcomeMessage()
+        public static void DisplayWelcomeMessage()
         {
             Console.WriteLine("╔══════════════════════════════════════════════════════╗");
             Console.WriteLine("║      WELCOME TO AIRLINE RESERVATION SYSTEM           ║");
@@ -71,7 +71,7 @@
         }
 
         // Displays the main menu and handles user navigation
-        static int ShowMainMenu()
+        public static int ShowMainMenu()
         {
             // Main menu loop
             while (true)
@@ -703,7 +703,7 @@
             Console.ReadLine();
         }
 
-        static void SearchBookingsByDestination(string destination)
+        public static void SearchBookingsByDestination(string destination)
         {
             Console.WriteLine($"\n\n");
             bool found = false;
@@ -751,7 +751,7 @@
         }
 
         /* -------------------------- System Utilities -------------------------- */
-        static bool ConfirmAction(string action)
+        public static bool ConfirmAction(string action)
         {
             Console.WriteLine("╔════════════════════════════════════════════════════════╗");
             Console.WriteLine("║                                                        ║");
@@ -783,7 +783,7 @@
             }
         }
 
-        static void StartSystem()
+        public static void StartSystem()
         {
             DisplayWelcomeMessage();
         }
